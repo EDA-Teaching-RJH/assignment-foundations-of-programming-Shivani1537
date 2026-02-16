@@ -64,7 +64,7 @@ def run_system_monolith():
                     count = count + 1
         print("High ranking officers: " + str(count)) 
             
-            
+
         if opt == "5":
             print("Shutting down.")
             break
@@ -82,7 +82,7 @@ def run_system_monolith():
        
         if len(n) > 0:
             print("Database has entries.")
-        if len(n) == 0:
+        else:
             print("Database empty.")
 
         
