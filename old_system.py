@@ -64,7 +64,8 @@ def run_system_monolith():
                     count = count + 1
         print("High ranking officers: " + str(count)) 
             
-        elif opt == "5":
+            
+        if opt == "5":
             print("Shutting down.")
             break
             
