@@ -87,6 +87,18 @@ def search_crew(names, ranks, divisions, crew_ids):
         
         print("Not found")
 
+def filter_division(names, ranks, division, crew_ids):
+    division = input("Enter division: ")
+
+    found = False
+    for i in range(len(names)):
+        if divisions[i].lower() == division.lower():
+            print(names[i], ranks[i], crew_ids[i])
+            found = True
+
+        if not found:
+            print("No members in that division")
+
 while True:
     choice = display_menu("Shivani")
 
@@ -104,6 +116,9 @@ while True:
 
     elif choice == "5":
         search_crew(names, ranks, divisions, crew_ids)
+
+    elif choice == "6":
+        filter_division(names, ranks, divisions, crew_ids)
 
     elif choice == "9":
         print("Exit program")
