@@ -30,4 +30,25 @@ def display_menu(student_name):
     choice = input("Choose option: ")
     return choice
 
-display_menu("Shivani")
+def display_roster(names, ranks, divisions, crew_ids):
+    print("\nCrew List:\n")
+
+    for i in range(len(names)):
+        print("Name:", names[i])
+        print("Rank:", ranks[i])
+        print("Division:", divisions[i])
+        print("ID:", crew_ids[i])
+        print()
+
+while True:
+    choice = display_menu("Shivani")
+
+    if choice == "1":
+        display_roster(names, ranks, divisions, crew_ids)
+
+    elif choice == "9":
+        print("Exit program")
+        break
+
+    else:
+        print("Option not implemented yet")
