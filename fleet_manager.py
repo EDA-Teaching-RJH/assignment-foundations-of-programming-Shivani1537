@@ -66,6 +66,17 @@ def remove_member(names, ranks, divisions, crew_ids):
     else:
         print("ID not found ")
 
+def update_rank(names, ranks, crew_ids):
+    crew_id = input("Enter ID: ")
+
+    if crew_id in crew_ids:
+        i = crew_ids.index(crew_id)
+        new_rank = input("Enter new rank: ")
+        ranks[i] = new_rank
+        print("Rank updated ")
+    else:
+        print("ID not found ")
+
 while True:
     choice = display_menu("Shivani")
 
@@ -77,6 +88,9 @@ while True:
 
     elif choice == "3":
         remove_member(names, ranks, divisions, crew_ids)
+
+    elif choice == "4":
+        update_rank(names, ranks, crew_ids)
 
     elif choice == "9":
         print("Exit program")
