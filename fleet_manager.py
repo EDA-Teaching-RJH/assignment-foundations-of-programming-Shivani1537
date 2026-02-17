@@ -77,6 +77,16 @@ def update_rank(names, ranks, crew_ids):
     else:
         print("ID not found ")
 
+def search_crew(names, ranks, divisions, crew_ids):
+    name = input("Enter name: ")
+
+    for i in range(len(names)):
+        if names[i].lower() == name.lower():
+            print(names[i], ranks[i], divisions[i], crew_ids[i])
+            return
+        
+        print("Not found")
+
 while True:
     choice = display_menu("Shivani")
 
@@ -91,6 +101,9 @@ while True:
 
     elif choice == "4":
         update_rank(names, ranks, crew_ids)
+
+    elif choice == "5":
+        search_crew(names, ranks, divisions, crew_ids)
 
     elif choice == "9":
         print("Exit program")
