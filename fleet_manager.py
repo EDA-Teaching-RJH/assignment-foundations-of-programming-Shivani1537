@@ -53,6 +53,19 @@ def add_member(names, ranks, divisions, crew_ids):
 
     print("Member added successfully ")
 
+def remove_member(names, ranks, divisions, crew_ids):
+    crew_id = input("Enter ID to remove: ")
+
+    if crew_id in crew_ids:
+        i = crew_ids.index(crew_id)
+        names.pop(i)
+        ranks.pop(i)
+        divisions.pop(i)
+        crew_ids.pop(i)
+        print("Member removed ")
+    else:
+        print("ID not found ")
+
 while True:
     choice = display_menu("Shivani")
 
@@ -61,6 +74,9 @@ while True:
 
     elif choice == "2":
         add_member(names, ranks, divisions, crew_ids)
+
+    elif choice == "3":
+        remove_member(names, ranks, divisions, crew_ids)
 
     elif choice == "9":
         print("Exit program")
