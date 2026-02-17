@@ -40,11 +40,27 @@ def display_roster(names, ranks, divisions, crew_ids):
         print("ID:", crew_ids[i])
         print()
 
+def add_member(names, ranks, divisions, crew_ids):
+    name = input("Enter name: ")
+    rank = input("Enter rank: ")
+    division = input("Enter division: ")
+    crew_id = input("Enter ID: ")
+
+    names.append(name)
+    ranks.append(rank)
+    divisions.append(division)
+    crew_ids.append(crew_id)
+
+    print("Member added successfully ")
+
 while True:
     choice = display_menu("Shivani")
 
     if choice == "1":
         display_roster(names, ranks, divisions, crew_ids)
+
+    elif choice == "2":
+        add_member(names, ranks, divisions, crew_ids)
 
     elif choice == "9":
         print("Exit program")
