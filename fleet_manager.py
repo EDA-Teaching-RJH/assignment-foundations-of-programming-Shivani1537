@@ -106,6 +106,14 @@ def calculate_payroll(ranks):
         total += pay.get(r.capitalize(), 2000)
     print("Total payroll:", total)
 
+def count_senior_officers(ranks):
+    count = 0
+    for r in ranks:
+        if r.lower() in ["captain","commander"]:
+            count += 1
+
+        print("Senior officers:", count)
+
 
 while True:
     choice = display_menu("Shivani")
@@ -130,6 +138,9 @@ while True:
 
     elif choice == "7":
         calculate_payroll(ranks)
+
+    elif choice == "8":
+        count_senior_officers(ranks)
 
     elif choice == "9":
         print("Exit program")
